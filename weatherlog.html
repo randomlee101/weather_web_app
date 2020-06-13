@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Weather App</title>
+        <link rel="stylesheet" href="weather.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="weather.js"></script>
+    </head>
+    <body>
+        <form id="myForm">
+        <div class="search_div">
+            <h2>
+                Search By:
+            </h2>
+            <div>
+            <input type="radio" name="search" value="city_name">
+            <p>City Name</p>
+            </div>
+            <div>
+            <input type="radio" name="search" value="postal_code">
+            <p>Postal Code</p>
+            </div>
+            <div>
+            <input type="radio" name="search" value="lat_long">
+            <p>Latitude/Longitude</p>
+            </div>
+        </div>
+
+        <h2>
+            Show in Search Results:
+        </h2>
+        <div class="show_div">
+            <div>
+                <input type="checkbox" name="show" value="longitude">
+                <p>Longitude</p>
+            </div>
+            <div>
+                <input type="checkbox" name="show" value="latitude">
+                <p>Latitude</p>
+            </div>
+            <div>
+                <input type="checkbox" name="show" value="weather">
+                <p>Weather</p>
+            </div>
+            <div>
+                <input type="checkbox" name="show" value="temperature">
+                <p>Temperature</p>
+            </div>
+            <div>
+                <input type="checkbox" name="show" value="pressure">
+                <p>Pressure</p>
+            </div>
+            <div>
+                <input type="checkbox" name="show" value="humidity">
+                <p>Humidity</p>
+            </div>
+            <div>
+                <input type="checkbox" name="show" value="wind speed">
+                <p>Wind Speed</p>
+            </div>
+            <div>
+                <input type="checkbox" name="show" value="wind direction">
+                <p>Wind Direction</p>
+            </div>
+            <div>
+                <input type="checkbox" name="show" value="sunrise">
+                <p>Sunrise</p>
+            </div>
+            <div>
+                <input type="checkbox" name="show" value="sunset">
+                <p>Sunset</p>
+            </div>
+        </div>
+
+        <div class="entries">
+            <div><p id="first_entry">City Name</p> <input type="text" name="" id="first" oninput="updateMessage()" required></div>
+            <div><p id="second_entry">Country Code</p> <input type="text" name="" id="second" oninput="updateMessage()" required></div>
+            <div><button>Search</button></div>
+        </div>
+        </form>
+
+        <div class="output">
+
+        </div>
+
+        <div class="table">
+            <div><h2>Search Log:</h2></div>
+            <table border="1">
+                <thead>
+                    <td>City</td>
+                    <td>Country</td>
+                    <td>Longitude</td>
+                    <td>Latitude</td>
+                    <td>Weather</td>
+                    <td>Temperature</td>
+                    <td>Pressure</td>
+                    <td>Humidity</td>
+                    <td>Wind Speed</td>
+                    <td>Wind Direction</td>
+                    <td>Sunrise</td>
+                    <td>Sunset</td>
+                    <td><button onclick="deleteAll()">Clear Log</button></td>
+                </thead>
+                <tbody>
+
+                </tbody>
+            </table>
+        </div>
+    </body>
+</html>

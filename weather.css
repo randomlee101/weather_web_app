@@ -1,0 +1,113 @@
+* {
+    margin: 5px;
+    font-family: cursive;
+}
+
+body {
+    margin: 15px;
+}
+
+.search_div {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.search_div div * {
+    display: inline-block;
+}
+
+.show_div {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.show_div div {
+    width: 30%;
+    border: 2px solid black;
+    margin-bottom: 15px;
+    margin-left: 2px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    padding: 3px;
+}
+
+.table {
+    width: 100%;
+}
+
+table {
+    width: 100%;
+}
+
+table thead
+{
+    font-weight: bold;
+}
+
+table button
+{
+    width: 100%;
+    margin: auto;
+    text-align: center;
+}
+
+.show_div div * {
+    display: inline-block;
+}
+
+.show_div input {
+    height: 20px;
+    width: 20px;
+    margin: 2px;
+}
+
+.entries {
+    display: flex;
+    justify-content: center;
+}
+
+.entries div {
+    display: flex;
+}
+
+.entries input[type='text']:not(:placeholder-shown) {
+    border: 2px solid grey;
+}
+
+.entries input[type='text']:valid {
+    border: 2px solid green;
+}
+
+.entries input[type='number']:valid {
+    border: 2px solid green;
+}
+
+.entries input[type='text']:invalid:focus {
+    border: 5px solid red;
+}
+
+.entries input[type='number']:invalid:focus {
+    border: 5px solid red;
+}
+
+@media (max-width: 600px) {
+    .search_div {
+        display: block;
+    }
+    .show_div {
+        display: block;
+    }
+    .show_div div {
+        width: 100%;
+    }
+    .entries {
+        display: block;
+    }
+    .entries div {
+        display: flex;
+        justify-content: space-between;
+    }
+}
